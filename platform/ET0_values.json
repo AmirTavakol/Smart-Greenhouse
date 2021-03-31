@@ -1,0 +1,17 @@
+{
+  "station": {
+    "ID": "Carmagnola",
+    "coordinates": {
+      "lat": 0.783415275,
+      "lon": 0.134143097,
+      "altitude": 232
+    }
+  },
+  "values": {
+    "temperature": 20.5,
+    "humidity": 70,
+    "Solar radiation": 2,
+    "Atm Pressure": 0.98,
+    "wind": 0.2
+  }
+}
