@@ -1,17 +1,19 @@
 {
-  "station": {
-    "ID": "Carmagnola",
-    "coordinates": {
-      "lat": 0.783415275,
-      "lon": 0.134143097,
-      "altitude": 232
-    }
-  },
-  "values": {
-    "temperature": 20.5,
-    "humidity": 70,
-    "Solar radiation": 2,
-    "Atm Pressure": 0.98,
-    "wind": 0.2
-  }
+    "station": {
+        "ID": "Carmagnola",
+        "coordinates": {
+            "lat": 0.783415275,
+            "lon": 0.134143097,
+            "altitude": 232
+        }
+    },
+    "values": {
+        "PAR": 0.27,
+        "SOILTC": 20.45,
+        "SOIL3": 6578.95,
+        "PRES": 99364.57,
+        "HUM": 47.7,
+        "TC": 21.25
+    },
+    "timestamp": "2021-03-24T00:20:58"
 }

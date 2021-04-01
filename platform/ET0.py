@@ -1,6 +1,13 @@
+"""Main Script used to perform ET0 evaluation"""
+
+#TODO: understand how to use radiation data and integration with Prof.Zavattaro formula
+#TODO: integration of es and ea values
+
+
 import json
 import ET0_evaluation
 import math
+import select_mysql
 
 def delta(T_mean):
     '∆ slope vapour pressure curve [kPa °C-1]'
@@ -25,16 +32,18 @@ with open('ET0_values.json') as json_file:
 
 if __name__ == '__main__':
 
+    "first of all get the last measured values"
+    select_mysql
+
     #loading measured values
     values = data['values']
-    T = values['temperature']
-    atm_press = values['Atm Pressure']
+    T = values['TC']
+    atm_press = values['PRES']
 
     #evalauting coefficients
     delta = delta(T)
     gamma = gamma(atm_press)
     R_n = R_n()
-
 
     print(values)
     ET0 = ET0_evaluation.ET0(delta, R_n, gamma, T)
