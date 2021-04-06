@@ -1,5 +1,5 @@
 """Main Script used to perform ET0 evaluation"""
-#proa
+
 
 #TODO: understand how to use radiation data and integration with Prof.Zavattaro formula
 #TODO: integration of es and ea values
