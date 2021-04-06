@@ -26,7 +26,7 @@ if __name__ == '__main__':
     """
     select = "SELECT sensor, value, timestamp FROM sensorParser WHERE timestamp > '2021-3-24-0-10-10' ORDER BY timestamp DESC LIMIT 6 "
 
-    print(select)
+    #print(select)
     mycursor.execute(select)
 
     myresult = mycursor.fetchall()
