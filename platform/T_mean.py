@@ -2,11 +2,11 @@
 
 """
 #####EXAMPLE########
-#Mean('2021-3-24-0-0-10', '2021-3-24-0-30-10')
+#T_mean('2021-3-24-0-0-10', '2021-3-24-0-30-10')
 
 import db_connect
 
-def Mean(start, end, sensor = 'TC'):
+def T_mean(start, end, sensor = 'TC'):
 
     mydb = db_connect.connect()
     mycursor = mydb.cursor()
@@ -14,8 +14,9 @@ def Mean(start, end, sensor = 'TC'):
     mycursor.execute(select)
 
     myresult = mycursor.fetchall()
-    T_max = myresult[-1]
-    T_min= myresult[0]
+    T_max = float(myresult[-1][0])
+    T_min= float(myresult[0][0])
+
     T_mean = (T_min + T_max)/2
 
     return T_mean,T_min, T_max
@@ -23,7 +24,7 @@ def Mean(start, end, sensor = 'TC'):
 
 
 
-
+#t_mean, T_min, T_max = T_mean('2021-3-24-0-0-10', '2021-3-24-0-30-10')
 
 
 
