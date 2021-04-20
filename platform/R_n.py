@@ -29,7 +29,7 @@ def Ra(julian_day=0,latitude):
 
 def Rs0(Ra,altitude = 200):
 
-    Rs0 = (0.075 + 0.00002*altitude) * Ra
+    Rs0 = (0.075 + 0.00002*altitude)*Ra
 
     return Rs0
 
