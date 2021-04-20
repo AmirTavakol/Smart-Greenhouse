@@ -5,6 +5,18 @@
 import T_mean
 import math
 import datetime
+import numpy as np
+
+def Rs(Rs_umol):
+    "convert Rs in MJ/m^2"
+    Rs_umol = np.ones(96) #96 samples everyday
+    """at Rs_umol you need all the measurements take over a day of radiation.
+    You can also directly provide the mean value if you already have it """
+    Rs_umol_average = Rs_umol.mean()
+    Rs_umol_tot = Rs_umol_average*60*60*24
+    Rs = Rs_mol_tot/4.6e6
+
+    return Rs
 
 def ea(T_min,T_max,RH_min,RH_max):
     et0_min = 0.618 * math.exp(17,27*T_min/(T_min+273.3))
@@ -15,7 +27,7 @@ def ea(T_min,T_max,RH_min,RH_max):
     return ea
 
 
-def Ra(julian_day=0,latitude):
+def Ra(julian_day=0,latitude=0.70):
 
     "specify the julian day, otherwise we automatically obtain get it (the current one)"
     if julian_day == 0:
