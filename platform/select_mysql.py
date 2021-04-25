@@ -1,6 +1,9 @@
 """The following script aims at performing SELECT query to database in order to update
 the JSON file (ET0_values.json) that is storing the informations related to the last measured values"""
 
+"""------------Deprecated-----------------"""
+        #it is using the old database
+
 #TODO
 #add more parameter (Possibility to make specific select query (for date, only some element, keep n entries, etc...)
 #TODO: possibility to estimate the mean value, max and minimum and so on...
