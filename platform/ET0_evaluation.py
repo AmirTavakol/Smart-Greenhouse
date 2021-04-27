@@ -11,7 +11,7 @@ class measurement(object):
 
     def __init__(self, Tmin, Tmax, RHmin,
                  RHmax, atm_pressure, par_avg,
-                 julian_day = 0, latitude = 0.70, altitude = 200, wind = 0):
+                 julian_day = 0, latitude = 0.7834, altitude = 232, wind = 0):
         self.Tmin = Tmin
         self.Tmax = Tmax
         self.RHmin = RHmin
@@ -41,10 +41,10 @@ class measurement(object):
         T_max = self.Tmax
         RH_min = self.RHmin
         RH_max = self.RHmax
-        et0_min = 0.618 * math.exp(17.27*T_min/(T_min+273.3))
-        et0_max = 0.618 * math.exp(17.27 * T_max / (T_max + 273.3))
+        et0_min = 0.618 * math.exp((17.27*T_min)/(T_min+237.3))
+        et0_max = 0.618 * math.exp((17.27 * T_max) / (T_max + 237.3))
 
-        ea = ((et0_min*RH_max) + (et0_max*RH_min))/100*2
+        ea = ((et0_min*RH_max) + (et0_max*RH_min))/200
         return ea
 
     @property
@@ -52,7 +52,7 @@ class measurement(object):
         "convert Rs in MJ/m^2"
         Rs_umol_avg = self.par_avg
         Rs_umol_tot = Rs_umol_avg*60*60*24
-        Rs = Rs_umol_tot/4.6e6
+        Rs = Rs_umol_tot/(4.6*10e6)
 
         return Rs
 

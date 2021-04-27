@@ -61,7 +61,6 @@ if __name__ == '__main__':
     print(atm_press)
 
     measurement = ET0_evaluation.measurement(Tmin, Tmax, RHmin, RHmax, atm_press, par_avg, julian_day = julian_day)
-    measurement.set_julian_day(1) #rimuovilo, serve solo per il debug
 
     """
     Rs = R_n.Rs(Rs_umol_avg=par_avg)
