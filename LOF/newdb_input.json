@@ -1,0 +1,79 @@
+[
+    {
+        "sensor": "ANE",
+        "value": "0.00",
+        "timestamp": "2021-04-28T07:58:32",
+        "ID": "20175",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "66.0",
+        "timestamp": "2021-04-28T07:58:20",
+        "ID": "20183",
+        "isOutlier": false
+    },
+    {
+        "sensor": "PAR",
+        "value": "8.79",
+        "timestamp": "2021-04-28T07:58:32",
+        "ID": "20179",
+        "isOutlier": false
+    },
+    {
+        "sensor": "PLV1",
+        "value": "0.00",
+        "timestamp": "2021-04-28T07:58:32",
+        "ID": "20178",
+        "isOutlier": false
+    },
+    {
+        "sensor": "PLV2",
+        "value": "0.00",
+        "timestamp": "2021-04-28T07:58:32",
+        "ID": "20177",
+        "isOutlier": false
+    },
+    {
+        "sensor": "PLV3",
+        "value": "0.00",
+        "timestamp": "2021-04-28T07:58:32",
+        "ID": "20176",
+        "isOutlier": false
+    },
+    {
+        "sensor": "PRES",
+        "value": "97558.66",
+        "timestamp": "2021-04-28T07:58:20",
+        "ID": "20182",
+        "isOutlier": false
+    },
+    {
+        "sensor": "SOIL3",
+        "value": "7246.38",
+        "timestamp": "2021-04-28T07:58:20",
+        "ID": "20181",
+        "isOutlier": false
+    },
+    {
+        "sensor": "SOILTC",
+        "value": "17.10",
+        "timestamp": "2021-04-28T07:58:20",
+        "ID": "20180",
+        "isOutlier": false
+    },
+    {
+        "sensor": "TC",
+        "value": "18.81",
+        "timestamp": "2021-04-28T07:58:20",
+        "ID": "20184",
+        "isOutlier": false
+    },
+    {
+        "sensor": "WV",
+        "value": "2",
+        "timestamp": "2021-04-28T07:58:32",
+        "ID": "20174",
+        "isOutlier": false
+    }
+]
