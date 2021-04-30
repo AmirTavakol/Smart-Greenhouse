@@ -72,5 +72,11 @@ class db_connection(object):
         response = self.call_procedure(procedure_name='USP_GET_PARAMETER_DATA', args = arg, parameter = True)
         return response[-1]
 
+    def saveFilteredData(self, inputjson):
+        arg = [inputjson]
+        response = self.call_procedure(procedure_name='USP_SAVE_FILTERDDATA', args =arg)
+        return response
+
+
 
 

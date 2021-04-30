@@ -4,7 +4,7 @@ import trainModel
 import evaluator
 import logging
 import time
-
+import dbconnection
 
     
 def train():
@@ -31,9 +31,13 @@ testInterval = 900
 
 if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s - %(message)s',filename="logfilename.log", level=logging.INFO)
-
+    saveData = dbconnection.db_connection()
+#%%    
+    #uncomment 3 below lines if you want to run it only once to check
     # model = train()
     # test_data = test(model)
+    # saveData.saveFilteredData(test_data)
+#%%
     '''
     every testInterval, latest measurements are used as
     test data using latest trained model
@@ -49,6 +53,7 @@ if __name__ == "__main__":
             model = train()
             start_time = time.time()
         test_data = test(model)
+        saveData.saveFilteredData(test_data)
         
         time.sleep(testInterval)
                 
