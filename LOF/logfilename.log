@@ -1,0 +1,71 @@
+2021-04-30 12:00:26,737 - train model called
+2021-04-30 12:00:27,123 - test model called
+2021-04-30 12:00:27,420 - for sensor ANE, new input 0.00 detected as: inlier
+2021-04-30 12:00:27,423 - for sensor HUM, new input 44.9 detected as: inlier
+2021-04-30 12:00:27,425 - for sensor PAR, new input 71.96 detected as: outlier
+2021-04-30 12:00:27,427 - for sensor PLV1, new input 0.00 detected as: inlier
+2021-04-30 12:00:27,428 - for sensor PLV2, new input 0.00 detected as: inlier
+2021-04-30 12:00:27,429 - for sensor PLV3, new input 0.00 detected as: inlier
+2021-04-30 12:00:27,431 - for sensor PRES, new input 97820.95 detected as: inlier
+2021-04-30 12:00:27,433 - for sensor SOIL3, new input 7812.50 detected as: inlier
+2021-04-30 12:00:27,437 - for sensor SOILTC, new input 23.02 detected as: inlier
+2021-04-30 12:00:27,440 - for sensor TC, new input 25.82 detected as: inlier
+2021-04-30 12:00:27,441 - for sensor WV, new input 2 detected as: inlier
+2021-04-30 17:41:15,333 - train model called
+2021-04-30 21:46:58,135 - train model called
+2021-04-30 21:48:54,601 - train model called
+2021-04-30 21:54:33,218 - train model called
+2021-04-30 21:55:45,447 - train model called
+2021-04-30 21:58:53,172 - train model called
+2021-04-30 22:00:58,764 - train model called
+2021-04-30 22:17:14,346 - train model called
+2021-04-30 22:25:42,895 - train model called
+2021-04-30 22:28:26,152 - train model called
+2021-04-30 22:29:55,393 - train model called
+2021-04-30 22:29:55,829 - test model called
+2021-04-30 22:29:56,134 - for sensor ANE, new input 0.00 detected as: inlier
+2021-04-30 22:29:56,149 - for sensor HUM, new input 75.5 detected as: inlier
+2021-04-30 22:29:56,149 - for sensor PAR, new input 0.00 detected as: inlier
+2021-04-30 22:29:56,149 - for sensor PLV1, new input 0.00 detected as: inlier
+2021-04-30 22:29:56,149 - for sensor PLV2, new input 0.00 detected as: inlier
+2021-04-30 22:29:56,149 - for sensor PLV3, new input 0.00 detected as: inlier
+2021-04-30 22:29:56,149 - for sensor PRES, new input 97723.83 detected as: inlier
+2021-04-30 22:29:56,165 - for sensor SOIL3, new input 7246.38 detected as: inlier
+2021-04-30 22:29:56,165 - for sensor SOILTC, new input 17.39 detected as: inlier
+2021-04-30 22:29:56,165 - for sensor TC, new input 16.91 detected as: inlier
+2021-04-30 22:29:56,165 - for sensor WV, new input 2 detected as: inlier
+2021-04-30 22:30:22,037 - train model called
+2021-04-30 22:33:16,614 - train model called
+2021-04-30 22:33:17,022 - test model called
+2021-04-30 22:33:17,343 - for sensor ANE, new input 0.00 detected as: inlier
+2021-04-30 22:33:17,343 - for sensor HUM, new input 75.5 detected as: inlier
+2021-04-30 22:33:17,343 - for sensor PAR, new input 0.00 detected as: inlier
+2021-04-30 22:33:17,343 - for sensor PLV1, new input 0.00 detected as: inlier
+2021-04-30 22:33:17,343 - for sensor PLV2, new input 0.00 detected as: inlier
+2021-04-30 22:33:17,343 - for sensor PLV3, new input 0.00 detected as: inlier
+2021-04-30 22:33:17,343 - for sensor PRES, new input 97723.83 detected as: inlier
+2021-04-30 22:33:17,358 - for sensor SOIL3, new input 7246.38 detected as: inlier
+2021-04-30 22:33:17,358 - for sensor SOILTC, new input 17.39 detected as: inlier
+2021-04-30 22:33:17,358 - for sensor TC, new input 16.91 detected as: inlier
+2021-04-30 22:33:17,358 - for sensor WV, new input 2 detected as: inlier
+2021-04-30 22:33:19,705 - test model called
+2021-04-30 22:33:20,033 - for sensor ANE, new input 0.00 detected as: inlier
+2021-04-30 22:33:20,036 - for sensor HUM, new input 75.5 detected as: inlier
+2021-04-30 22:33:20,037 - for sensor PAR, new input 0.00 detected as: inlier
+2021-04-30 22:33:20,039 - for sensor PLV1, new input 0.00 detected as: inlier
+2021-04-30 22:33:20,040 - for sensor PLV2, new input 0.00 detected as: inlier
+2021-04-30 22:33:20,041 - for sensor PLV3, new input 0.00 detected as: inlier
+2021-04-30 22:33:20,043 - for sensor PRES, new input 97723.83 detected as: inlier
+2021-04-30 22:33:20,044 - for sensor SOIL3, new input 7246.38 detected as: inlier
+2021-04-30 22:33:20,046 - for sensor SOILTC, new input 17.39 detected as: inlier
+2021-04-30 22:33:20,048 - for sensor TC, new input 16.91 detected as: inlier
+2021-04-30 22:33:20,050 - for sensor WV, new input 2 detected as: inlier
+2021-04-30 22:33:35,147 - train model called
+2021-04-30 22:35:13,342 - train model called
+2021-04-30 22:41:12,721 - train model called
+2021-04-30 22:42:26,554 - train model called
+2021-04-30 22:42:50,194 - train model called
+2021-04-30 22:43:38,236 - train model called
+2021-04-30 22:44:36,012 - train model called
+2021-04-30 22:47:01,206 - train model called
+2021-04-30 22:49:28,789 - train model called

@@ -1,0 +1,212 @@
+[
+    {
+        "sensor": "HUM",
+        "value": "75.5",
+        "timestamp": "2021-04-30T20:28:16",
+        "ID": "22790",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "75.4",
+        "timestamp": "2021-04-30T20:12:47",
+        "ID": "22773",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "75.4",
+        "timestamp": "2021-04-30T19:57:17",
+        "ID": "22768",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "75.0",
+        "timestamp": "2021-04-30T19:41:47",
+        "ID": "22751",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "74.2",
+        "timestamp": "2021-04-30T19:26:17",
+        "ID": "22746",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "74.2",
+        "timestamp": "2021-04-30T19:10:47",
+        "ID": "22729",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "73.4",
+        "timestamp": "2021-04-30T18:55:17",
+        "ID": "22724",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "72.7",
+        "timestamp": "2021-04-30T18:39:47",
+        "ID": "22707",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "71.9",
+        "timestamp": "2021-04-30T18:24:18",
+        "ID": "22702",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "71.0",
+        "timestamp": "2021-04-30T18:08:49",
+        "ID": "22691",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "69.8",
+        "timestamp": "2021-04-30T17:53:19",
+        "ID": "22680",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "68.7",
+        "timestamp": "2021-04-30T17:37:48",
+        "ID": "22669",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "67.4",
+        "timestamp": "2021-04-30T17:22:19",
+        "ID": "22658",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "66.6",
+        "timestamp": "2021-04-30T17:06:49",
+        "ID": "22647",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "65.4",
+        "timestamp": "2021-04-30T16:51:21",
+        "ID": "22636",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "63.8",
+        "timestamp": "2021-04-30T16:35:51",
+        "ID": "22625",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "61.4",
+        "timestamp": "2021-04-30T16:20:22",
+        "ID": "22614",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "57.9",
+        "timestamp": "2021-04-30T16:04:52",
+        "ID": "22603",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "55.5",
+        "timestamp": "2021-04-30T15:49:22",
+        "ID": "22592",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "53.0",
+        "timestamp": "2021-04-30T15:33:52",
+        "ID": "22581",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "50.7",
+        "timestamp": "2021-04-30T15:18:22",
+        "ID": "22570",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "49.1",
+        "timestamp": "2021-04-30T15:02:52",
+        "ID": "22559",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "47.7",
+        "timestamp": "2021-04-30T14:47:23",
+        "ID": "22548",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "48.8",
+        "timestamp": "2021-04-30T14:31:53",
+        "ID": "22537",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "45.9",
+        "timestamp": "2021-04-30T14:16:25",
+        "ID": "22526",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "45.4",
+        "timestamp": "2021-04-30T14:00:55",
+        "ID": "22515",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "40.4",
+        "timestamp": "2021-04-30T13:45:25",
+        "ID": "22504",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "35.4",
+        "timestamp": "2021-04-30T13:29:55",
+        "ID": "22493",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "35.3",
+        "timestamp": "2021-04-30T13:14:25",
+        "ID": "22482",
+        "isOutlier": false
+    },
+    {
+        "sensor": "HUM",
+        "value": "37.3",
+        "timestamp": "2021-04-30T12:58:56",
+        "ID": "22471",
+        "isOutlier": false
+    }
+]

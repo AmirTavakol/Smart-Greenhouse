@@ -33,7 +33,7 @@ if __name__ == "__main__":
     logging.basicConfig(format='%(asctime)s - %(message)s',filename="logfilename.log", level=logging.INFO)
     saveData = dbconnection.db_connection()
 #%%    
-    #uncomment 3 below lines if you want to run it only once to check
+    # uncomment 3 below lines if you want to run it only once to check
     # model = train()
     # test_data = test(model)
     # saveData.saveFilteredData(test_data)

@@ -3,6 +3,7 @@ import numpy as np
 import LOF
 import pandas as pd
 import dbconnection
+import json
 
         
 class Train(object):
@@ -56,13 +57,40 @@ class Train(object):
             data = LOF.LOF(measure['value'],n_neighbors)
                         
             #outlier detection of current data set
-            anomalies, inliers,_ = data.run()
+            anomalies, inliers, _ , scores = data.run()
             
             #model training using remaining inliers from previous step
             tModel = data.trainModel()
             tModels.append(tModel)
             #make a dictionary with format {sensor: model}
-            tModels_dict[f'{sensor}'] = tModel
+            tModels_dict[sensor] = tModel
+            
+            #save train data
+            measure['isOutlier'] = scores
+            toSend = self.toJson(measure)
             
         print("\n\n\n\nmodel trained!\n\n\n\n")
         return tModels_dict
+    #%%
+    def toJson(self,measure):
+        
+        for i,score in enumerate(measure['isOutlier']):
+            if score == 1:
+                measure['isOutlier'][i+1] = False
+            else:
+                measure['isOutlier'][i+1] = True
+                
+        output_dict = {}
+        output_list =[]
+        
+        for m in range(1,len(measure)+1):
+            output_dict['sensor'] = measure['sensor'][m]
+            output_dict['value'] = measure['value'][m]
+            output_dict['timestamp']=measure['timeStamp'][m].isoformat()
+            output_dict['ID'] = str(measure['ID'][m])
+            output_dict['isOutlier'] = measure['isOutlier'][m]
+            c = output_dict.copy()
+            output_list.append(c)
+
+        with open('train_input.json', 'w') as outfile: 
+            json.dump(output_list, outfile, indent = 4)

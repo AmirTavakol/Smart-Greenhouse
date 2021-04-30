@@ -31,7 +31,7 @@ class LOF(object):
                 self.inliers.append(i[0])
             else:
                 self.anomalies.append(i[0])
-        return self.anomalies,self.inliers,y_pred_score
+        return self.anomalies,self.inliers,y_pred_score,y_pred
     
     def trainModel(self):
         data = self.reshape(self.inliers)
