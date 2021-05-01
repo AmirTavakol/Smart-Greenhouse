@@ -2,78 +2,78 @@
     {
         "sensor": "ANE",
         "value": "0.00",
-        "timestamp": "2021-04-30T20:28:28",
-        "ID": "22782",
+        "timestamp": "2021-05-01T09:38:43",
+        "ID": "23343",
         "isOutlier": false
     },
     {
         "sensor": "HUM",
-        "value": "75.5",
-        "timestamp": "2021-04-30T20:28:16",
-        "ID": "22790",
+        "value": "60.0",
+        "timestamp": "2021-05-01T09:38:32",
+        "ID": "23351",
         "isOutlier": false
     },
     {
         "sensor": "PAR",
-        "value": "0.00",
-        "timestamp": "2021-04-30T20:28:28",
-        "ID": "22786",
+        "value": "8.24",
+        "timestamp": "2021-05-01T09:38:43",
+        "ID": "23347",
         "isOutlier": false
     },
     {
         "sensor": "PLV1",
         "value": "0.00",
-        "timestamp": "2021-04-30T20:28:28",
-        "ID": "22785",
+        "timestamp": "2021-05-01T09:38:43",
+        "ID": "23346",
         "isOutlier": false
     },
     {
         "sensor": "PLV2",
         "value": "0.00",
-        "timestamp": "2021-04-30T20:28:28",
-        "ID": "22784",
+        "timestamp": "2021-05-01T09:38:43",
+        "ID": "23345",
         "isOutlier": false
     },
     {
         "sensor": "PLV3",
         "value": "0.00",
-        "timestamp": "2021-04-30T20:28:28",
-        "ID": "22783",
+        "timestamp": "2021-05-01T09:38:43",
+        "ID": "23344",
         "isOutlier": false
     },
     {
         "sensor": "PRES",
-        "value": "97723.83",
-        "timestamp": "2021-04-30T20:28:16",
-        "ID": "22789",
+        "value": "97562.95",
+        "timestamp": "2021-05-01T09:38:32",
+        "ID": "23350",
         "isOutlier": false
     },
     {
         "sensor": "SOIL3",
-        "value": "7246.38",
-        "timestamp": "2021-04-30T20:28:16",
-        "ID": "22788",
+        "value": "7692.31",
+        "timestamp": "2021-05-01T09:38:32",
+        "ID": "23349",
         "isOutlier": false
     },
     {
         "sensor": "SOILTC",
-        "value": "17.39",
-        "timestamp": "2021-04-30T20:28:16",
-        "ID": "22787",
+        "value": "21.82",
+        "timestamp": "2021-05-01T09:38:32",
+        "ID": "23348",
         "isOutlier": false
     },
     {
         "sensor": "TC",
-        "value": "16.91",
-        "timestamp": "2021-04-30T20:28:16",
-        "ID": "22791",
+        "value": "23.34",
+        "timestamp": "2021-05-01T09:38:32",
+        "ID": "23352",
         "isOutlier": false
     },
     {
         "sensor": "WV",
         "value": "2",
-        "timestamp": "2021-04-30T20:28:28",
-        "ID": "22781",
+        "timestamp": "2021-05-01T09:38:43",
+        "ID": "23342",
         "isOutlier": false
     }
 ]

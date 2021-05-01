@@ -69,3 +69,51 @@
 2021-04-30 22:44:36,012 - train model called
 2021-04-30 22:47:01,206 - train model called
 2021-04-30 22:49:28,789 - train model called
+2021-05-01 09:45:28,894 - train model called
+2021-05-01 09:50:27,776 - train model called
+2021-05-01 09:50:49,659 - train model called
+2021-05-01 10:02:04,760 - train model called
+2021-05-01 10:03:59,923 - train model called
+2021-05-01 10:04:51,515 - train model called
+2021-05-01 10:07:13,588 - train model called
+2021-05-01 10:10:01,134 - train model called
+2021-05-01 10:10:17,084 - NumExpr defaulting to 8 threads.
+2021-05-01 10:11:08,967 - train model called
+2021-05-01 10:27:12,731 - train model called
+2021-05-01 10:28:55,882 - train model called
+2021-05-01 10:34:15,950 - train model called
+2021-05-01 10:34:16,381 - test model called
+2021-05-01 10:34:16,701 - for sensor ANE, new input 0.00 detected as: inlier
+2021-05-01 10:34:16,710 - for sensor HUM, new input 57.0 detected as: inlier
+2021-05-01 10:34:16,714 - for sensor PAR, new input 25.82 detected as: inlier
+2021-05-01 10:34:16,718 - for sensor PLV1, new input 0.00 detected as: inlier
+2021-05-01 10:34:16,722 - for sensor PLV2, new input 0.00 detected as: inlier
+2021-05-01 10:34:16,722 - for sensor PLV3, new input 0.00 detected as: inlier
+2021-05-01 10:34:16,726 - for sensor PRES, new input 97604.31 detected as: inlier
+2021-05-01 10:34:16,726 - for sensor SOIL3, new input 7462.69 detected as: inlier
+2021-05-01 10:34:16,730 - for sensor SOILTC, new input 19.39 detected as: inlier
+2021-05-01 10:34:16,730 - for sensor TC, new input 23.69 detected as: inlier
+2021-05-01 10:34:16,734 - for sensor WV, new input 2 detected as: inlier
+2021-05-01 10:34:35,284 - train model called
+2021-05-01 10:36:35,130 - train model called
+2021-05-01 10:37:04,467 - train model called
+2021-05-01 10:40:36,936 - train model called
+2021-05-01 10:41:16,773 - train model called
+2021-05-01 10:51:34,979 - train model called
+2021-05-01 10:51:54,563 - train model called
+2021-05-01 10:52:48,235 - train model called
+2021-05-01 11:31:23,335 - train model called
+2021-05-01 11:31:51,796 - train model called
+2021-05-01 11:31:52,447 - test model called
+2021-05-01 11:31:52,755 - for sensor ANE, new input 0.00 detected as: inlier
+2021-05-01 11:31:52,757 - for sensor HUM, new input 59.5 detected as: inlier
+2021-05-01 11:31:52,759 - for sensor PAR, new input 15.38 detected as: inlier
+2021-05-01 11:31:52,760 - for sensor PLV1, new input 0.00 detected as: inlier
+2021-05-01 11:31:52,762 - for sensor PLV2, new input 0.00 detected as: inlier
+2021-05-01 11:31:52,763 - for sensor PLV3, new input 0.00 detected as: inlier
+2021-05-01 11:31:52,764 - for sensor PRES, new input 97586.53 detected as: inlier
+2021-05-01 11:31:52,767 - for sensor SOIL3, new input 7692.31 detected as: inlier
+2021-05-01 11:31:52,769 - for sensor SOILTC, new input 21.59 detected as: inlier
+2021-05-01 11:31:52,771 - for sensor TC, new input 23.58 detected as: inlier
+2021-05-01 11:31:52,772 - for sensor WV, new input 2 detected as: inlier
+2021-05-01 11:34:06,399 - train model called
