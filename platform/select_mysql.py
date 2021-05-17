@@ -27,12 +27,14 @@ if __name__ == '__main__':
     now = datetime.datetime.now()
     select = "SELECT sensor, value, timestamp FROM sensorParser WHERE timestamp > '" + now.isoformat() + "'"
     """
-    select = "SELECT sensor, value, timestamp FROM sensorParser WHERE timestamp > '2021-3-24-0-10-10' ORDER BY timestamp DESC LIMIT 6 "
+    select = "SELECT value FROM sensorParser WHERE sensor = 'SOIL3' ORDER BY timestamp DESC LIMIT 60 "
 
     #print(select)
     mycursor.execute(select)
 
     myresult = mycursor.fetchall()
+
+    print(myresult)
 
     values= {} #dict containing all the values read from sensors
 
@@ -52,8 +54,6 @@ if __name__ == '__main__':
 
     with open('ET0_values.json', 'w') as outfile:
         json.dump(data, outfile, indent = 4)
-
-
 
 
 
