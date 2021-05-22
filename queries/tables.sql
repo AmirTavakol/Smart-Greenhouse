@@ -1,0 +1,36 @@
+use MeshliumDB;
+
+
+CREATE TABLE CLIENTDETAILS
+(
+ID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+ClientName VARCHAR(200) NOT NULL
+);
+
+Insert into CLIENTDETAILS (ClientName) values ('University of Turin (Agraria)');
+
+CREATE TABLE `USER`
+(
+	ID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	PASSWORD VARCHAR(100) NOT NULL,
+    EMAIL VARCHAR(100) NOT NULL,
+    ROLES VARCHAR(200) NOT NULL,
+    UNIQUE INDEX `EMAIL` (`EMAIL`)
+);
+
+
+CREATE TABLE CROPS
+(
+	`id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `Name` varchar(16) NOT NULL,
+	`GrafanaURL` varchar(300) NOT NULL
+);
+
+Insert into CROPS (`Name`, GrafanaURL) values ('Basil Crop', '');
+
+CREATE TABLE EVAPOTRANSPIRATIONDATA
+(
+	`id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `ET0_value` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci  DEFAULT NULL,
+	`dateInserted` timestamp
+);
