@@ -71,6 +71,41 @@ class db_connection(object):
         arg = list([0])
         response = self.call_procedure(procedure_name='USP_GET_PARAMETER_DATA', args = arg, parameter = True)
         return response[-1]
+    
+    #method to save the filtered data after oulier detection
+    def saveFilteredData(self, inputjson):
+        arg = [inputjson]
+        response = self.call_procedure(procedure_name='USP_SAVE_FILTERDDATA', args = arg)
+        return response
+
+    #method to save ET0 value in the database
+    def saveET0Value(self, value):
+        arg = [value]
+        response = self.call_procedure(procedure_name='USP_SAVE_ET0VALUE', args = arg)
+        return response
+
+    #method to get latest ET0 value from the database
+    def getET0Value(self):
+        response = self.call_procedure(procedure_name='USP_GET_ET0VALUE')
+        return response
+
+    #method to get soil moisture sensor data for particular number of days
+    def getSoilSensorData(self, days = 14):
+        arg = [days]
+        response = self.call_procedure(procedure_name='USP_GET_DATA_SOILTENSIONSENSOR', args=arg)
+        return response
+
+    #method to save user data
+    def saveUserData(self, inputjson):
+        arg = list([inputjson['password'], inputjson['email'], inputjson['roles'], 0])
+        response = self.call_procedure(procedure_name='USP_SAVE_USER', args=arg, parameter = True)
+        return response[-1]
+
+    #method to login
+    def login(self, inputjson):
+        arg = list([inputjson['password'], inputjson['email'], 0])
+        response = self.call_procedure(procedure_name='USP_USER_LOGIN', args=arg, parameter = True)
+        return response[-1]
 
 
 
