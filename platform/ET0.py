@@ -1,9 +1,4 @@
 """Main Script used to perform ET0 evaluation"""
-
-
-#TODO: understand how to use radiation data and integration with Prof.Zavattaro formula
-
-
 import json
 import dbconnection
 import ET0_evaluation
@@ -12,8 +7,8 @@ import select_mysql
 import R_n
 import ast
 from pprint import pprint
-
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 """
 def delta(T_mean):
@@ -98,10 +93,24 @@ if __name__ == '__main__':
         ET0 = measurement.ET_0
         print('\n ET0 ', ET0)
 
+        db.saveET0Value(ET0)
+
         #make the insert call here
     except:
         print("cannot retrieve data from database")
 
+
+# points = 200
+# et0s = np.zeros(points)
+
+# for i in range(points):
+#
+#     measurement = ET0_evaluation.measurement(Tmin, Tmax, RHmin, RHmax, atm_press, par_avg, julian_day=julian_day)
+#     et0s[i] = measurement.ET_0
+#
+#
+# plt.plot(et0s)
+# plt.show()
 
 
 
