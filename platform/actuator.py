@@ -84,8 +84,8 @@ try:
     b_sensor = 1 - a_etc #weight for the soil tension sensor data
     soil_tension_avg = mean
     soil_tension_std = std
-    print(soil_tension_avg)
-    print(soil_tension_std)
+    # print(soil_tension_avg)
+    # print(soil_tension_std)
     soil_tension = float(soil_tension_list[0][0])
     # high soil_tension, means that the ground is dry
 
