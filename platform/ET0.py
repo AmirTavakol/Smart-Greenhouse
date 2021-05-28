@@ -93,7 +93,7 @@ if __name__ == '__main__':
         ET0 = measurement.ET_0
         print('\n ET0 ', ET0)
 
-        #db.saveET0Value(ET0)
+        db.saveET0Value(ET0)
 
         #make the insert call here
     except:
