@@ -106,6 +106,18 @@ class db_connection(object):
         arg = list([inputjson['password'], inputjson['email'], 0])
         response = self.call_procedure(procedure_name='USP_USER_LOGIN', args=arg, parameter = True)
         return response[-1]
+    
+    #method to get all crops
+    def getAllCrops(self):
+        arg = list([0])
+        response = self.call_procedure(procedure_name='USP_GET_CROPS', args=arg, parameter = True)
+        return response[-1]
+    
+    #method to get location of client
+    def getClientLocation(self):
+        arg = list([0])
+        response = self.call_procedure(procedure_name='USP_GET_CLIENTLOCATION', args=arg, parameter = True)
+        return response[-1]
 
 
 

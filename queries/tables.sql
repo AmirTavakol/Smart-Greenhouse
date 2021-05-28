@@ -1,13 +1,14 @@
 use MeshliumDB;
 
-
 CREATE TABLE CLIENTDETAILS
 (
 ID int PRIMARY KEY NOT NULL AUTO_INCREMENT,
-ClientName VARCHAR(200) NOT NULL
+ClientName VARCHAR(200) NOT NULL,
+Latitude decimal(10,6) NOT NULL,
+Longitude decimal(10,6) NOT NULL
 );
 
-Insert into CLIENTDETAILS (ClientName) values ('University of Turin (Agraria)');
+Insert into CLIENTDETAILS (ClientName,Latitude,Longitude) values ('University of Turin (Agraria)', 45.066398, 7.592362);
 
 CREATE TABLE `USER`
 (
@@ -23,10 +24,11 @@ CREATE TABLE CROPS
 (
 	`id` int PRIMARY KEY NOT NULL AUTO_INCREMENT,
     `Name` varchar(16) NOT NULL,
-	`GrafanaURL` varchar(300) NOT NULL
+	`GrafanaURL` varchar(300) NOT NULL,
+    `DateSeeded` datetime NOT NULL
 );
 
-Insert into CROPS (`Name`, GrafanaURL) values ('Basil Crop', '');
+Insert into CROPS (`Name`, GrafanaURL, DateSeeded) values ('Basil Crop', '','2021-04-13 00:00:00');
 
 CREATE TABLE EVAPOTRANSPIRATIONDATA
 (
