@@ -52,7 +52,7 @@ class measurement(object):
         "convert Rs in MJ/m^2"
         Rs_umol_avg = self.par_avg
         Rs_umol_tot = Rs_umol_avg*60*60*24
-        Rs = Rs_umol_tot/(2.02*10e6)
+        Rs = Rs_umol_tot/(2.02*1e6)
 
         return Rs
 
