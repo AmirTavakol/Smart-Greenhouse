@@ -4,9 +4,9 @@
     "mid": 0.59,
     "end": 0.42
   },
-  "height": {
-    "ini": 0.2,
-    "mid": 0.4,
-    "end": 0.4
+  "periods": {
+    "ini" : 0,
+    "mid" : 25,
+    "end" : 100
   }
 }
