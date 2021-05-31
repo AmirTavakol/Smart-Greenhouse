@@ -58,7 +58,7 @@ class predict(object):
                 #giving test data to LOF trained model to evaluate                
                 outlierDetector = self.model[sensor].score_samples(test_value)
                 
-                if outlierDetector <=0 and outlierDetector >=-2:
+                if outlierDetector <=1 and outlierDetector >=-3:
                     isOutlier = False
                     status = 'inlier'
                 else:
