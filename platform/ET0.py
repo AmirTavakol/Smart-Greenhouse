@@ -1,14 +1,15 @@
 """Main Script used to perform ET0 evaluation"""
-import json
-import dbconnection
 import ET0_evaluation
-import math
-import select_mysql
-import R_n
+import sys
+import os
 import ast
 from pprint import pprint
-import numpy as np
-import matplotlib.pyplot as plt
+
+
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+import dbconnection
 
 """
 def delta(T_mean):
@@ -26,26 +27,17 @@ with open('ET0_values.json') as json_file:
     data = json.load(json_file)
 """
 
-def get(ET0):
-    return ET0
 
-if __name__ == '__main__':
-    '''
-    "first of all get the last measured values"
-    select_mysql
 
-    #loading measured values
-    values = data['values']
-    T = values['TC']
-    atm_press = values['PRES']
-    Rs = values['PAR']
+def ET0_2_db():
 
-    '''
 
-    
-
+    #first of all connect to db, it has to be done only once
     db = dbconnection.db_connection()
+
     file = db.getDataForParameter()
+
+
     try:
         dict = ast.literal_eval(file)
         Tmax = dict['max_tc']
@@ -98,23 +90,6 @@ if __name__ == '__main__':
         #make the insert call here
     except:
         print("cannot retrieve data from database")
-
-
-# points = 200
-# et0s = np.zeros(points)
-
-# for i in range(points):
-#
-#     measurement = ET0_evaluation.measurement(Tmin, Tmax, RHmin, RHmax, atm_press, par_avg, julian_day=julian_day)
-#     et0s[i] = measurement.ET_0
-#
-#
-# plt.plot(et0s)
-# plt.show()
-
-
-
-
 
 
 

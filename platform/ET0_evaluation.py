@@ -3,7 +3,6 @@ from typing import Any, Union
 
 """script used for evaluation of R_n"""
 
-import T_mean
 import math
 import datetime
 
@@ -135,4 +134,6 @@ class measurement(object):
 
     def set_julian_day(self, julian_day):
         self.julian_day = julian_day
+
+
 

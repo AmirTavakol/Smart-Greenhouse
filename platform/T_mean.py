@@ -24,7 +24,9 @@ def T_mean(start, end, sensor = 'TC'):
 
 
 
-#t_mean, T_min, T_max = T_mean('2021-3-24-0-0-10', '2021-3-24-0-30-10')
+t_mean, T_min, T_max = T_mean('2021-5-21-0-0-00', '2021-5-22-0-0-00')
+
+print(T_min, T_max)
 
 
 
