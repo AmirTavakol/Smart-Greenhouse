@@ -119,6 +119,11 @@ class db_connection(object):
         response = self.call_procedure(procedure_name='USP_GET_CLIENTLOCATION', args=arg, parameter = True)
         return response[-1]
 
+     #method to get the flowmeter from the database
+    def getFlowMeterData(self):
+        response = self.call_procedure(procedure_name='USP_GET_AVG_WATERFLOW')
+        return response
+
 
 
 
