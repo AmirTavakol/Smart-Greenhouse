@@ -75,10 +75,10 @@ def trigger():
     WATER_FLOW = float(WATER_FLOW[0][0])
 
     try:
-        if WATER_FLOW < 0.0005:
-            WATER_FLOW = 0.005  # TODO: to be find
+        if WATER_FLOW < 0.0002:
+            WATER_FLOW = 0.002  # TODO: to be find
 
-        POT_SURFACE = 0.2 #m**2 ---> pot surface #TODO: to be find
+        POT_SURFACE = 0.06 #m**2 ---> pot surface #TODO: to be find
         #first of all read the ETC value
 
         path_json_file = 'Greenhouse/Smart-Greenhouse/platform/ETc.json'
