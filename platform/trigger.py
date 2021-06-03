@@ -1,6 +1,12 @@
 import json
 from datetime import datetime, timedelta
+import sys
+import os
 
+currentdir = os.path.dirname(os.path.realpath(__file__))
+parentdir = os.path.dirname(currentdir)
+sys.path.append(parentdir)
+import dbconnection
 
 #first part of the code can be used as base for irrigation every more days and not daily (or for more irrigations during the same day)
 
@@ -63,29 +69,40 @@ while LOOP:
 '''
 
 def trigger():
-    WATER_FLOW = 0.005  # TODO: to be find
-    POT_SURFACE = 0.2 #m**2 ---> pot surface #TODO: to be find
-    #first of all read the ETC value
+    db = dbconnection.db_connection()
+    #get flow meter data from db
+    WATER_FLOW = db.getFlowMeterData()
+    WATER_FLOW = float(WATER_FLOW[0][0])
 
-    path_json_file = 'Greenhouse/Smart-Greenhouse/platform/ETc.json'
-    file = open(path_json_file)
-    data = json.load(file)
+    try:
+        if WATER_FLOW < 0.0005:
+            WATER_FLOW = 0.005  # TODO: to be find
 
-    ETc = data['ETc']
-    crop_id = data['crop id']
-    needed_water = ETc * POT_SURFACE #that's the ammount of water we need to give to the plant
-    opening_time = int(needed_water/WATER_FLOW) #in seconds
+        POT_SURFACE = 0.2 #m**2 ---> pot surface #TODO: to be find
+        #first of all read the ETC value
 
-    now = datetime.now()
+        path_json_file = 'Greenhouse/Smart-Greenhouse/platform/ETc.json'
+        file = open(path_json_file)
+        data = json.load(file)
 
-    start = datetime(now.year, now.month, now.day, 6, 0, 0) #start irrigation at 6 am UTC
-    end = start + timedelta(seconds=opening_time)  # keep the valve opened for the 'opening_time'
+        ETc = data['ETc']
+        crop_id = data['crop id']
+        needed_water = ETc * POT_SURFACE #that's the ammount of water we need to give to the plant
+        opening_time = int(needed_water/WATER_FLOW) #in seconds
 
-    start = start.strftime("%d/%m/%Y %H:%M:%S")
+        now = datetime.now()
 
-    end = end.strftime("%d/%m/%Y %H:%M:%S")
-    json_dict = {"crop id": crop_id, "start irrigation": start, "stop irrigation": end, "last_update": datetime.now().strftime("%d/%m/%Y %H:%M:%S")}
+        start = datetime(now.year, now.month, now.day, 6, 0, 0) #start irrigation at 6 am UTC
+        end = start + timedelta(seconds=opening_time)  # keep the valve opened for the 'opening_time'
 
-    with open('Greenhouse/Smart-Greenhouse/platform/irrigation.json', 'w') as file:
-        json.dump(json_dict, file)
+        start = start.strftime("%d/%m/%Y %H:%M:%S")
+
+        end = end.strftime("%d/%m/%Y %H:%M:%S")
+        json_dict = {"crop id": crop_id, "start irrigation": start, "stop irrigation": end, "last_update": datetime.now().strftime("%d/%m/%Y %H:%M:%S")}
+
+        with open('Greenhouse/Smart-Greenhouse/platform/irrigation.json', 'w') as file:
+            json.dump(json_dict, file)
+
+    except:
+        print("cannot evaluate irrigation period")
 
