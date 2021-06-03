@@ -51,7 +51,7 @@ if __name__ == "__main__":
         saveData = dbconnection.db_connection()
     
         #set intervals of training and testing   
-        trainInterval_h = 8
+        trainInterval_h = 24
         trainInterval_s = trainInterval_h*3600
         testInterval = 900
     
