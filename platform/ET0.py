@@ -4,6 +4,7 @@ import sys
 import os
 import ast
 from pprint import pprint
+import math
 
 
 currentdir = os.path.dirname(os.path.realpath(__file__))
@@ -36,6 +37,7 @@ def ET0_2_db():
     db = dbconnection.db_connection()
 
     file = db.getDataForParameter()
+    location = db.getClientLocation()
 
 
     try:
@@ -46,14 +48,20 @@ def ET0_2_db():
         RHmin = dict['min_hum']
         par_avg = dict['avg_solar']
 
+        location = ast.literal_eval(location)[0]
+        latitude = location['latitude']
+        latitude = math.radians(latitude)
+        print(latitude)
+
+
         print("Over the last 24h, the maximum temperature was: " + str(Tmax) +"\n the minimum temperature was: "+ str(Tmin)+ " \n while RH minimum: "+str(RHmin)+" and RH Maximum: "+ str(RHmax) +" \n the average solar radiation was:" + str(par_avg))
 
         values = db.getDataLastEpoch()
         atm_press = float(values[8][1])/1000
         julian_day = values[8][2].timetuple().tm_yday
-        print(atm_press)
+        #print(atm_press)
 
-        measurement = ET0_evaluation.measurement(Tmin, Tmax, RHmin, RHmax, atm_press, par_avg, julian_day = julian_day)
+        measurement = ET0_evaluation.measurement(Tmin, Tmax, RHmin, RHmax, atm_press, par_avg, julian_day = julian_day, latitude=latitude)
 
         """
         Rs = R_n.Rs(Rs_umol_avg=par_avg)
@@ -90,7 +98,5 @@ def ET0_2_db():
         #make the insert call here
     except:
         print("cannot retrieve data from database")
-
-
 
 
