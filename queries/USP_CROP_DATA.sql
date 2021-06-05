@@ -1,0 +1,16 @@
+USE MeshliumDB;
+
+DROP PROCEDURE IF EXISTS USP_CROP_DATA;
+DELIMITER //
+CREATE PROCEDURE USP_CROP_DATA(
+IN CROPID INT,
+OUT OUTPUT JSON
+)
+BEGIN
+
+SELECT JSON_OBJECT('id', ID, 'name', `Name`, 'grafanaUrl', GrafanaURL, 'dateseeded', DateSeeded) from CROPS where ID = CROPID into OUTPUT;
+
+
+END
+//
+DELIMITER ;
