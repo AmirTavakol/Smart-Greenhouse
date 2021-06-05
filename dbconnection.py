@@ -123,6 +123,24 @@ class db_connection(object):
     def getFlowMeterData(self):
         response = self.call_procedure(procedure_name='USP_GET_AVG_WATERFLOW')
         return response
+    
+    #method to get data for last irrigation
+    def getLastIrrigationData(self, cropId):
+        arg = [cropId]
+        response = self.call_procedure(procedure_name='USP_GET_IRRIGATION_DATA_LAST_EPOCH', args=arg)
+        return response
+    
+     #method to save data for  irrigation
+    def saveIrrigationData(self, cropId, duration):
+        arg = [cropId, duration]
+        response = self.call_procedure(procedure_name='USP_SAVE_IRRIGATION_DATA', args=arg)
+        return response
+    
+    #method to get crop Data
+    def getCropData(self, cropID):
+        arg = list([cropID,0])
+        response = self.call_procedure(procedure_name='USP_CROP_DATA', args = arg, parameter = True)
+        return response[-1]
 
 
 
