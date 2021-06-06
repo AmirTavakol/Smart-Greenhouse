@@ -42,21 +42,21 @@ class RestOperations(object):
 			if file != '':
 				data = json.load(file)
 				
-				if data != None:
+				if data:
 					startDateTime = datetime.strptime(str(data['start irrigation']), '%d/%m/%Y %H:%M:%S')
 					endDateTime = datetime.strptime(str(data['stop irrigation']), '%d/%m/%Y %H:%M:%S')
 					duration = (endDateTime-startDateTime).total_seconds()
 					cropId = data['crop id']
 				
-				lastData = self.conn.getLastIrrigationData(cropId)
-				currentDate = datetime.utcnow()
-				if lastData != []:
-					lastDataObj = lastData[0][0]
-				if currentDate >= startDateTime and (currentDate-lastDataObj).days != 0:
-					autoMaticTrigger = True
-				else:
-					if currentDate >= startDateTime:
+					lastData = self.conn.getLastIrrigationData(cropId)
+					currentDate = datetime.utcnow()
+					if lastData != []:
+						lastDataObj = lastData[0][0]
+					if currentDate >= startDateTime and (currentDate-lastDataObj).days != 0:
 						autoMaticTrigger = True
+					else:
+						if currentDate >= startDateTime:
+							autoMaticTrigger = True
 
 		if autoMaticTrigger or manualTrigger:
 			result['trigger'] = True
