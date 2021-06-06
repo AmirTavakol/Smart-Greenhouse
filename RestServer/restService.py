@@ -4,7 +4,7 @@ import restOperations
 import logging
 import sys
 import os
-cur_path = os.path.dirname(__file__)
+cur_path = os.path.abspath(os.path.dirname(__file__))
 
 
 class RestServer(restOperations.RestOperations):
@@ -13,7 +13,7 @@ class RestServer(restOperations.RestOperations):
 	def __init__(self):
 		restOperations.RestOperations.__init__(self)
 		logging.basicConfig(format='%(asctime)s - %(message)s',filename="logfilename.log", level=logging.INFO)
-		self.dataFile = os.path.relpath('..\\platform\\irrigation.json', cur_path)
+		self.dataFile = os.path.join(cur_path,'../platform/irrigation.json')
 		self.manualTrigger = False
 		self.automaticTrigger = False
 		self.cropId = 0
