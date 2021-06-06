@@ -63,7 +63,7 @@ class RestOperations(object):
 			if self.manualTrigger:
 				result['duration'] = 35
 			else:
-				result['duration'] = duration
+				result['duration'] = 2*duration
 		else:
 			result['trigger'] = False
 			result['duration'] = 0
