@@ -100,8 +100,8 @@ def trigger():
 
         end = end.strftime("%d/%m/%Y %H:%M:%S")
         json_dict = {"crop id": crop_id, "start irrigation": start, "stop irrigation": end, "last_update": datetime.now().strftime("%d/%m/%Y %H:%M:%S")}
-
-        with open('Greenhouse/Smart-Greenhouse/platform/irrigation.json', 'w') as file:
+        path = currentdir + '/irrigation.json'
+        with open(path, 'w') as file:
             json.dump(json_dict, file)
 
     except:

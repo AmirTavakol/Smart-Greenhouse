@@ -99,4 +99,3 @@ def ET0_2_db():
     except:
         print("cannot retrieve data from database")
 
-

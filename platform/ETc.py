@@ -169,8 +169,8 @@ def saveETc():
                          "crop type " : crop_type,
                          "last update " : current_date.isoformat()
                          }
-
-            with open('Greenhouse/Smart-Greenhouse/platform/ETc.json', 'w') as file:
+            path = currentdir + '/ETc.json'
+            with open(path, 'w') as file:
                 json.dump(json_dict, file)
 
         except:
