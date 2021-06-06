@@ -16,9 +16,6 @@ class RestOperations(object):
 		result = self.conn.getAllCrops()
 		return result		
 
-	def getCropData(self, cropId):
-		pass
-
 	def login(self, userData):
 		result = {}
 		result = self.conn.login(userData)
