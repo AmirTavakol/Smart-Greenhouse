@@ -69,4 +69,4 @@ class RestOperations(object):
 		if result['trigger'] == True:
 			self.conn.saveIrrigationData(cropId,duration)
 
-		return json.dumps(result)
+		return str(result['trigger']) + ',' + str(result['duration'])
