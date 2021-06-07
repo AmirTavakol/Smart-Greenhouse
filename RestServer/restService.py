@@ -87,6 +87,6 @@ if __name__ == "__main__":
 
 
 	app = cherrypy.tree.mount(RestServer(),'/',conf)
-	cherrypy.config.update({'server.socket_port': 9090})
+	cherrypy.config.update({'server.socket_port': 1628})
 	cherrypy.engine.start()
 	cherrypy.engine.block()
