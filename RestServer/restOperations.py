@@ -49,11 +49,11 @@ class RestOperations(object):
 					currentDate = datetime.utcnow()
 					if lastData != []:
 						lastDataObj = lastData[0][0]
-					if currentDate >= startDateTime and (currentDate-lastDataObj).days != 0:
-						autoMaticTrigger = True
-					else:
-						if currentDate >= startDateTime:
+						if currentDate >= startDateTime and (currentDate-lastDataObj).days != 0:
 							autoMaticTrigger = True
+						else:
+							if currentDate >= startDateTime:
+								autoMaticTrigger = True
 
 		if autoMaticTrigger or manualTrigger:
 			result['trigger'] = True
