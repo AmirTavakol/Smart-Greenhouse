@@ -46,27 +46,29 @@ class RestOperations(object):
 					cropId = data['crop id']
 				
 					lastData = self.conn.getLastIrrigationData(cropId)
+					print(lastData)
 					currentDate = datetime.utcnow()
 					if lastData != []:
 						lastDataObj = lastData[0][0]
+						print(lastDataObj)
 						if currentDate >= startDateTime and (currentDate-lastDataObj).days != 0:
 							autoMaticTrigger = True
-						else:
-							if currentDate >= startDateTime:
-								autoMaticTrigger = True
+					else:
+						if currentDate >= startDateTime:
+							autoMaticTrigger = True
 
 		if autoMaticTrigger or manualTrigger:
 			result['trigger'] = True
 			if self.manualTrigger:
 				result['duration'] = 35
 			else:
-				result['duration'] = 3*duration
+				result['duration'] = int(3*duration)
 		else:
 			result['trigger'] = False
 			result['duration'] = 0
 
 						
 		if result['trigger'] == True:
-			self.conn.saveIrrigationData(cropId,duration)
+			self.conn.saveIrrigationData(cropId,result['duration'])
 
 		return str(result['trigger']) + ',' + str(result['duration'])
