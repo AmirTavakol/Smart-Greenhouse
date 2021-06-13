@@ -1,0 +1,97 @@
+
+
+<div id="mySidebar" class="sidebar trans">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a routerLink="/logout">Logout</a>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
+    <h2></h2>
+    <p></p>
+  </div>
+
+<div id="overlay2">
+    <span id="nav" *ngIf="dataLoaded">
+        <div class="spinner" style="display: block; position: fixed">
+        </div>
+    </span>
+    <span id="nav" *ngIf="dataLoaded">
+        <div class="submit-message" style="display: block; color: #FFFFFF; position: fixed; left: 49.7%; top: 54.5%;">
+            Loading...
+        </div>
+    </span>
+ </div>
+<div class="container">
+<div class='card'>
+    <div class='card-header'>
+        {{pageTitle}}
+    </div>
+<div class='card-body'>
+    <div class='row'>
+        <div class='col-md-2'>Filter by:</div>
+        <div class='col-md-4'>
+            <input type='text'
+            [(ngModel)]='listFilter'/>
+        </div>
+    </div>
+    <div class='row'>
+        <div class='col-md-6'>
+            <h4>Filtered by: {{listFilter}} </h4>
+        </div>
+    </div>
+    <div class= 'table-responsive'>
+        <table class='table table-striped table-hover'>
+            <thead>
+                <tr>
+                    <th class='ss'>Image</th>
+                    <th class='ss'>
+                        <!-- <button class='btn btn-primary' (click)='toggleImage()'>
+                            {{showDetails ? 'Hide' : 'Show'}} Details
+                        </button> -->
+                        Details
+                    </th>
+                    <th class='ss'>Type</th>
+                    <th class='ss'>Condition</th>
+                    <th class='ss'>Location</th>
+                
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let crop of filteredCrops'>
+                    <td>
+                        <img *ngIf='showImage'
+                        [src]='crop.imageUrl'
+                        [title]='crop.cropName'
+                        [style.width.px]='imageWidth'
+                        [style.margin.px]='imageMargin'>
+                      
+                    </td>
+                    <td>
+                        <button class='btn btn-outline-success'><a [routerLink]="['/grafana', crop.id]">Show</a></button> <!--Need to perform data-binding to show grafana dashboard after clicking on button.-->
+                    </td>
+                    <td>{{crop.cropName}}</td>
+                    <td>{{crop.cropCondition}}</td>
+                    <td>{{crop.cropLocation}}</td>
+                </tr>
+                  
+
+            </tbody>
+        </table>
+        
+    </div>
+</div>
+
+
+
+
+
+</div>
+<footer>
+    <div class="custom-shape-divider-bottom-1622200198">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+    </div>
+  </footer>
+</div>

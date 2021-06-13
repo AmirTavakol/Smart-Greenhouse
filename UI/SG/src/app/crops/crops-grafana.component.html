@@ -1,0 +1,46 @@
+<!---->
+<!--you can use an iframe. Grafana is not a javascript library so cannot be included/used directly from another web application like a library
+You can embedded panels via iframes or embedded whole grafana via iframe.
+If you want to handle auth via your app you need to setup grafana with auth proxy settings and proxy all requests -->
+
+<html>
+    <body>
+        
+      <div id="overlay1">
+        <span id="nav" *ngIf="dataLoaded">
+            <div class="spinner" style="display: block; position: fixed">
+            </div>
+        </span>
+        <span id="nav" *ngIf="dataLoaded">
+            <div class="submit-message" style="display: block; color: #FFFFFF; position: fixed; left: 49.7%; top: 54.5%;">
+                Loading...
+            </div>
+        </span>
+      </div>
+
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link btn btn btn-success btn-lg" routerLink='/action' [state]='{ data: cropData}'>Manual Access</a>
+            </li>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <li class="nav-item">
+              <a class="nav-link btn btn btn-secondary btn-lg" routerLink='/logout'>Logout</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"></a>
+            </li>
+          </ul>
+
+        <h2>{{cropData.cropName}} Condition - {{cropData.cropCondition}}</h2>
+
+        <div>
+            <iframe [src]='getURL()' frameborder="1px" title="{{cropData.cropName}}" class="holds-the-iframe"></iframe>
+        </div>
+        
+      
+    
+
+
+    </body>
+</html>
+

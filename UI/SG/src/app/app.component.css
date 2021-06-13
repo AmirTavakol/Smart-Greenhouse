@@ -1,0 +1,13 @@
+.image{
+    height:40em; background-size:cover; width:auto;
+    background-image:url('/src/assets/images/basil.jpg');
+    background-position:50% 50%;
+  }
+
+  .container{
+    background-image: url('/src/assets/images/123.jpg');
+}
+
+.bg-img{
+    background-image:url('assets/images/123.jpg');
+}
