@@ -33,12 +33,15 @@ class RestServer(restOperations.RestOperations):
 
 				elif(cmd == "getAllCrops"):
 					return self.getAllCrops()
+				
+				elif(cmd == "getAllCropsForUI"):
+					return self.getAllCropsForUI()
 
 				elif(cmd == "manualTriggerOn"):
 					self.manualTrigger = True
 					if params != {}:
 						self.cropId = params['cropId']
-					return True
+					return "true"
 
 				elif(cmd == "getCropData"):
 					if params != {}:

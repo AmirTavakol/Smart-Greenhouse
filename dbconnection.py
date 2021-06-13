@@ -1,4 +1,5 @@
-from mysql.connector import MySQLConnection, Error
+from mysql import connector
+from mysql.connector import MySQLConnection, Error, errors
 import mysql
 import cherrypy
 
@@ -29,9 +30,9 @@ class db_connection(object):
                     cursor = conn.cursor()
                     result = cursor.callproc(procedure_name, args)
                     conn.commit()
-                except mysql.connector.errors.IntegrityError:
-                    print('HTTP:409, Duplicate User ERROR')
-                    raise cherrypy.HTTPError(409, "User Details are duplicated")
+                except mysql.connector.Error as err :
+                    print(str(err.errno) + ',' + err.msg)
+                    return 0
                 
                 if(parameter):
                     cursor.close()
@@ -105,7 +106,10 @@ class db_connection(object):
     def login(self, inputjson):
         arg = list([inputjson['password'], inputjson['email'], 0])
         response = self.call_procedure(procedure_name='USP_USER_LOGIN', args=arg, parameter = True)
-        return response[-1]
+        if response == 0:
+            return '0'
+        else:
+            return response[-1]
     
     #method to get all crops
     def getAllCrops(self):
@@ -131,8 +135,8 @@ class db_connection(object):
         return response
     
      #method to save data for  irrigation
-    def saveIrrigationData(self, cropId, duration):
-        arg = [cropId, duration]
+    def saveIrrigationData(self, cropId, duration, manualTrigger):
+        arg = [cropId, duration, manualTrigger]
         response = self.call_procedure(procedure_name='USP_SAVE_IRRIGATION_DATA', args=arg)
         return response
     
